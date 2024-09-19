@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_2" data-name="レイヤー_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.9 21.37">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #f15a24;
+        stroke-miterlimit: 10;
+        stroke-width: .5px;
+      }
+
+      .cls-2 {
+        fill: #f15a24;
+      }
+    </style>
+  </defs>
+  <g id="WSP:トップ">
+    <g>
+      <circle class="cls-2" cx="11.78" cy="11.81" r="3.14"/>
+      <line class="cls-1" x1="13.63" y1="7.34" x2="16.38" y2=".91"/>
+      <line class="cls-1" x1="10.84" y1="6.97" x2="10.01" y2=".03"/>
+      <line class="cls-1" x1="8.24" y1="8.04" x2="4.05" y2="2.45"/>
+      <line class="cls-1" x1="4.05" y1="2.45" x2="8.24" y2="8.04"/>
+      <line class="cls-1" x1="14.4" y1="15.63" x2="18.59" y2="21.22"/>
+      <line class="cls-1" x1="6.52" y1="10.27" x2=".1" y2="7.52"/>
+      <line class="cls-1" x1="16.57" y1="14.45" x2="22.99" y2="17.2"/>
+      <line class="cls-1" x1="16.94" y1="11.65" x2="23.87" y2="10.82"/>
+      <line class="cls-1" x1="15.86" y1="9.05" x2="21.45" y2="4.87"/>
+      <line class="cls-1" x1="13.63" y1="7.34" x2="16.38" y2=".91"/>
+    </g>
+  </g>
+</svg>

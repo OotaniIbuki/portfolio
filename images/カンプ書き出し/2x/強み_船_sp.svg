@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_2" data-name="レイヤー_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54.99 38.15">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #173e6a;
+        stroke-miterlimit: 10;
+        stroke-width: 1.2px;
+      }
+    </style>
+  </defs>
+  <g id="WSP:トップ">
+    <g>
+      <rect class="cls-1" x="10.62" y="8.28" width="25.03" height="8.23" transform="translate(42.53 30.06) rotate(-165.84)"/>
+      <rect class="cls-1" x="17.77" y="2.32" width="13.79" height="6.11" transform="translate(47.27 16.63) rotate(-165.84)"/>
+      <path class="cls-1" d="M8.08,29.57C2.31,25.64-.68,18.39,1.13,11.22h0s53.13,13.41,53.13,13.41h0c-1.9,7.52-8.5,12.61-15.87,12.92"/>
+    </g>
+  </g>
+</svg>

@@ -7,7 +7,7 @@ html {
 body {
   font-family: fot-tsukuardgothic-std, sans-serif;
   font-weight: bold;
-  /* background-image: url(../portfolio_ootani/カンプ書き出し/4x/fv_pc@4x-80.jpg); */
+  /* background-image: url(./images/カンプ書き出し/4x/fv_pc@4x-80.jpg); */
   max-width: 100%;
 }
 
@@ -51,7 +51,7 @@ h2 {
 
 /* ヘッダー */
 .firstview {
-  background-image: url(../portfolio_ootani/カンプ書き出し/4x/fv_pc@4x-80.jpg);
+  background-image: url(./images/カンプ書き出し/4x/fv_pc@4x-80.jpg);
   height: 1683px;
   text-align: center;
   background-size: 100%;
@@ -93,7 +93,7 @@ h2 {
 
 .top_nav a:hover {
   transition: 0.5s;
-  background-image: url(../portfolio_ootani/カンプ書き出し/2x/グロナビ太陽_pc.svg);
+  background-image: url(./images/カンプ書き出し/2x/グロナビ太陽_pc.svg);
   background-size: contain; 
   background-repeat: no-repeat;
   background-position-x: 53px;
@@ -584,13 +584,13 @@ button {
   line-height: 28px;
 }
 .parallax_content.img_bg_01{
-  background-image: url(../portfolio_ootani/自分＿ノーマル\ \(新\).jpg);
+  background-image: url(./images/自分＿ノーマル\ \(新\).jpg);
 }
 .parallax_content.img_bg_02{
-  background-image: url(../portfolio_ootani/自分＿びっくり（新）.jpg);
+  background-image: url(./images/自分＿びっくり（新）.jpg);
 }
 .parallax_content.img_bg_03{
-  background-image: url(../portfolio_ootani/自分＿メガネ\(新\).jpg);
+  background-image: url(./images/自分＿メガネ\(新\).jpg);
 }
 
 .ribbon1 {

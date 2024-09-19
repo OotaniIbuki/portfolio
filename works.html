@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>works page</title>
+  <link rel="stylesheet" href="https://use.typekit.net/xxxxxxx.css">
+  <link rel="stylesheet" href="reset.css" />
+<link rel="stylesheet" href="style.css" />
+<script>
+  (function(d) {
+    var config = {
+      kitId: 'piq8vsg',
+      scriptTimeout: 3000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
+</head>
+
+<body>
+  <div class="main_contents">
+  <header id="header" class="profile_header">
+    <h1>
+    <object data="../portfolio_ootani/カンプ書き出し/2x/下層_logo_pc.svg" width="254" height="55"> </object>
+    </h1>
+    <nav class="top_nav">
+    </nav>
+
+    <nav class="ham_nav">
+      <ul>
+        <li><a href="index.html">ホーム</a></li>
+        <li><a href="profile.html">プロフィール</a></li>
+      </ul>
+    </nav>
+    <button type="button" id="navbtn"></button>
+  </header>
+ 
+  <div class="contents_area">
+    <div class="works_page">
+    <h2>制作実績</h2>
+    <p>タップすると詳細を見ることができます。</p>
+    <div class="works_area">
+      <div class="works_contents">
+        <div class="works_img"></div>
+        <div class="works_text">○○様&emsp;公式サイト</div>
+      </div>
+      <div class="works_contents">
+        <div class="works_img"></div>
+        <div class="works_text">○○様&emsp;公式サイト</div>
+      </div>
+      <div class="works_contents">
+        <div class="works_img"></div>
+        <div class="works_text">○○様&emsp;公式サイト</div>
+      </div>
+      <div class="works_contents">
+        <div class="works_img"></div>
+        <div class="works_text">○○様&emsp;公式サイト</div>
+      </div>
+      <div class="works_contents">
+        <div class="works_img"></div>
+        <div class="works_text">○○様&emsp;公式サイト</div>
+      </div>
+      <div class="works_contents">
+        <div class="works_img"></div>
+        <div class="works_text">○○様&emsp;公式サイト</div>
+      </div>
+    </div>
+  </div>
+
+  <footer id="profile_footer">
+    <button class="works_btn" onclick="location.href='index.html'">トップページへ戻る</button>
+    <button class="works_btn" onclick="location.href='profile.html'">大谷のプロフィールをもう一度読む</button>
+    <div class="footer_comment">(ありがとうございます！)</div>
+    <div class="copylight">
+      &copy;ふなででざいん2024
+      </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+  </div>
+  <script>
+    document.getElementById("navbtn").onclick = function(){
+      document.querySelector('html').classList.toggle('open');
+    }
+    </script>
+</body>
+</html>

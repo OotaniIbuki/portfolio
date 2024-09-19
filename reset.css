@@ -19,6 +19,7 @@ h2 {
   margin: 0;
   padding: 0;
   line-height: 1;
+  letter-spacing: 0.1em;
   font-feature-settings: "palt";
   /*デフォルトの文字色、font-familyを予め当てておく*/
   color:#173E6A;

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_2" data-name="レイヤー_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129.48 75.44">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #173e6a;
+        stroke-miterlimit: 10;
+        stroke-width: 1.2px;
+      }
+    </style>
+  </defs>
+  <g id="D_xFF1A_私について">
+    <g>
+      <rect class="cls-1" x="21.18" y="15.99" width="58.66" height="19.28" transform="translate(102.67 47.72) rotate(176.05)"/>
+      <rect class="cls-1" x="32.67" y="1.74" width="32.32" height="14.32" transform="translate(98.16 14.41) rotate(176.05)"/>
+      <path class="cls-1" d="M29.51,74.86C13.79,70.31,1.84,56.34.64,39.07h0s128.14-8.86,128.14-8.86h0c1.25,18.13-9.74,34.28-25.94,40.35"/>
+    </g>
+  </g>
+</svg>

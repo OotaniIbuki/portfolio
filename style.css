@@ -61,9 +61,10 @@ h2 {
 #header {
   display: flex;
   justify-content: space-between;
-  padding: 40px 0;
+  padding: 18px 0 0 20px;
   width: 90%;
   margin: 0 auto;
+  align-items: center;
 }
 
 #header ul{
@@ -78,27 +79,67 @@ h2 {
 }
 
 .top_nav li{
-  font-family: fot-tsukuardgothic-std, sans-serif;
+  /* font-family: fot-tsukuardgothic-std, sans-serif;
   font-size: 14px;
-  color: #fff;
+  color: #fff; */
   margin-left: 35px;
 }
-
 .top_nav a {
   font-family: fot-tsukuardgothic-std, sans-serif;
   font-size: 14px;
   color: #fff;
-  margin-left: 35px;
 }
+  /* display: block;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  transition: .3s;//アニメーションすることを想定して追加しておきます
+}
+
+/* .top_nav a {
+  font-family: fot-tsukuardgothic-std, sans-serif;
+  font-size: 14px;
+  color: #fff;
+  display: block;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  transition: .3s;
+  position: relative;
+  padding: 0 10px;
+  transition: .3s;//アニメーションすることを想定して追加しておきます
+}
+.top_nav a::after {
+  content: '';
+  display: block;
+  height: 1px;
+  width: 80%;
+  background: #FD6E50;
+  position: absolute;
+  bottom: -10px;
+  left: 10%;
+  transform: scale(0, 1);
+  transition: .3s;
+}
+
+.top_nav a:hover {
+  color: #FD6E50;
+}
+
+.top_nav a:hover::after {
+  transform: scale(1, 1);
+} */
 
 .top_nav a:hover {
   transition: 0.5s;
   background-image: url(./images/カンプ書き出し/2x/グロナビ太陽_pc.svg);
   background-size: contain; 
   background-repeat: no-repeat;
-  background-position-x: 53px;
+  background-position-x: 50px;
   background-position-y: -5px;
 }
+
+
 
 .contents_area {
   width: 80%;
@@ -107,6 +148,9 @@ h2 {
 }
 
 /* mainvisual */
+#mainvisual {
+  margin-top: 158px;
+}
 
 #mainvisual h1 {
   /* font-family:  zen-kaku-gothic-new, sans-serif;
@@ -125,6 +169,11 @@ h2 {
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
 }
+
+
+
+
+
 
 /* concept */
 
@@ -162,12 +211,15 @@ h2 {
 }
 
 .profile_img_area {
-  background-color: #173E6A;
   width: 526px;
   height: 351px;
   position: absolute;
   top: 21px;
   left: -65px;
+}
+
+.profile_img_area img {
+  border-radius: 4%;
 }
 
 .profile_right {
@@ -277,14 +329,18 @@ h2 {
 }
 
 .profile_btn02:hover {
-  background-color: #3e8e41;
+  background-color: #173E6A;
   transition: all 0.5s ease;
 }
 
 /* works */
+.works_header {
+  position: static;
+}
 
 #works {
   margin-bottom: 225px;
+  position: relative;
 }
 
 #works h2 {
@@ -298,7 +354,11 @@ h2 {
   row-gap: 80px;
 }
 
-.works_contents {
+.works_contents:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
 .works_img {
@@ -309,6 +369,12 @@ h2 {
   border-radius: 36px;
   border: solid 1px #173E6A;
 }
+.works_img img {
+  object-fit:contain;
+  width:100%;
+  height:100%;
+}
+
 
 .works_text {
   font-size: 20px;
@@ -339,10 +405,11 @@ h2 {
 
 /* skill */
 #skill {
-  background-color: #89CCE0;
+  background: rgba(137, 204, 224, 0.65);
   padding: 116px 0 ;
   margin: 0 calc(50% - 50vw);
   width: 100vw;
+  position: relative;
 }
 
 #skill h2 {
@@ -359,27 +426,26 @@ h2 {
 }
 .design_skill {
   align-items: center;
-  padding: 30px;
+  padding: 60px;
 }
 .skill_title {
   display: inline-block;
   border: 1px solid #173E6A;
   padding: 10px;
   border-radius: 14px;
-  margin-bottom: 22px;
+  margin-bottom: 28px;
 }
 .skill_text {
   font-weight: normal;
   font-size: 16px;
   line-height: 28px;
   letter-spacing: 0.05px;
-  margin: 43px 30px;
+  margin: 28px 30px;
 }
 
 .skill_img {
   width: 375px;
   height: 279px;
-  background-color: #173E6A;
 }
 
 #contact {
@@ -514,15 +580,34 @@ button {
   position: relative;
 }
 
+
+
 /* #message p {
   font-size: 16px;
 } */
+
+.message_area div {
+  position: relative;
+  display:inline-block;
+  margin-bottom: 70px;
+}
+
+.message_area div p {
+  display: inline-block;
+  font-weight: bold;
+}
+
+.message_area p {
+  line-height: 28px;
+  font-weight: bold;
+}
+
 .thanks_sun_pc {
-  width: 106pc;
+  width: 106px;
   height: 95px;
   position: absolute;
-  top: -62px;
-  right: -152px;
+  top: -64px;
+  right: -67px;
 }
 
 .para_2 {
@@ -540,15 +625,26 @@ button {
 
 /* プロフィールページ */
 .main_contents {
-  background-color: #FD6E50;
   width: 100%;
   height: 100px;
 }
 
 /* できないー */
-.profile_header li {
-  color: #173E6A;
+/* .profile_header li {
   font-family: fot-tsukuardgothic-std, sans-serif;
+} */
+
+.profile_header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10000;
+  background-color: #fff;
+}
+
+.profile_header .top_nav a {
+  color: #173E6A;
+  font-weight: bold;
 }
 
 /* パララックスエリア */
@@ -566,7 +662,7 @@ button {
   font-weight: bold;
   line-height: 63px;
   text-align: left;
-  padding: 80px;
+  padding: 36px;
 }
 .front_wrapper{
   padding: 50px;
@@ -678,7 +774,7 @@ button {
 
 #me_and_design{
   padding-bottom: 300px;
-  margin-bottom: 542px;
+  position: relative;
 }
 
 #me_and_design h2 {
@@ -690,6 +786,74 @@ button {
   line-height: 32px;
   font-family:  zen-kaku-gothic-new, sans-serif;
 }
+.me_and_design_text .para_2:last-child {
+  margin-bottom: 290px
+}
+
+
+.ship {
+  width: 114px;
+  height: 74px;
+  animation: ship 3s infinite;
+}
+
+#ship_left {
+  position: absolute;
+  bottom: 350px;
+}
+#ship_right {
+  position: absolute;
+  bottom: 350px;
+  right: 10px;
+}
+.ship_and_me {
+  width: 64px;
+  object-fit: cover;
+  position: absolute;
+  bottom: 397px;
+  right: -12px;
+  animation: poyopoyo 3s infinite;
+}
+.poyopoyo {
+  animation: poyopoyo 2s ease-out infinite;
+  opacity: 1;
+}
+
+@keyframes poyopoyo {
+  0%, 40%, 60%, 80% {
+    transform: scale(1.0);
+  }
+  50%, 70% {
+    transform: scale(0.95);
+  }
+}
+
+
+
+@keyframes ship {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+#wave_profile_01 {
+  margin-bottom: 42px;
+  margin: 0 calc(50% - 50vw);
+  width: 100vw;
+}
+#wave_profile_02 {
+  margin-bottom: 42px;
+  margin: 0 calc(50% - 50vw);
+  width: 100vw;
+}
+#wave_profile_03 {
+  margin: 0 calc(50% - 50vw);
+  width: 100vw;
+}
+
 
 
 /* モバイルファーストのエリア */
@@ -703,12 +867,38 @@ button {
 /* h1, h2, h3 {
   font-family: 'Arima', cursive;
 } */
+
+#strong_point {
+  position: relative;
+}
+#strong_ship.ship {
+  position: absolute;
+  top: 404px;
+}
+.island {
+  width: 112px;
+  object-fit: cover;
+  position: absolute;
+  right: 0px;
+  top: 340px;
+  animation: ship 3s infinite;
+}
+#wave_strong_01 {
+  position: absolute;
+  top: 467px;
+  margin: 0 calc(50% - 50vw);
+  width: 100vw;
+}
+#wave_strong_01 .scroll-infinity__list--right {
+  animation: infinity-scroll-right 40s infinite linear 0.5s both;
+}
+
 .container {
   background: #fff;
-  /* 確認用box-shadow: 0 0 30px 3px rgba(110,90,70,.7); */
   padding: 0 2rem 186px;
   max-width: 350px;
   margin: auto;
+  position: relative;
 }
 .container h2 {
   margin-bottom: 104px;
@@ -802,7 +992,7 @@ button {
 #navbtn{
   position: fixed;
   top: 10px;
-  right: 12px;
+  right: 35px;
   padding: 0;
   outline: none;
   border: none;
@@ -817,14 +1007,14 @@ button {
   content : '';
   display: block;
   height: 1px;
-  background-color: #fff;
+  background-color: #FD6E50;
   transform: translateY(10px);
   transition: 0.3s ease-in-out;
 }
 
 #navbtn::before{
   transform: translateY(-10px);
-  box-shadow: 0 10px #fff;
+  box-shadow: 0 10px #FD6E50;
 }
 
 /* ナビゲーションボタン（閉じる） */
@@ -856,12 +1046,12 @@ button {
 }
 
 /* detail 作品詳細 */
+.detail_header {
+  position: static;
+}
 .mockup_pc {
   margin: 122px auto 80px;
 }
-
-
-
 .mockup_text_area {
   display: flex;
   justify-content: space-between;
@@ -889,7 +1079,9 @@ button {
 .mockup_text:last-child {
   margin-bottom: 0;
 }
-
+.mockup_screen h2 {
+  margin-bottom: 68px;
+}
 .screenshot {
   display: flex;
   justify-content: space-between;
@@ -897,6 +1089,7 @@ button {
 .pc_screen {
   width: 70%;
   object-fit: contain;
+  object-position: top;
   border: 0.75px solid #B3B3B3;
 }
 .sp_screen {
@@ -906,14 +1099,295 @@ button {
 }
 
 /* 波形のコード */
-.text {
+/* .text {
   ...
   transform: translateY(1px);/* ←ブラウザによって隙間ができるので入れている */
 }
 
 .u-pc {
   display: none;
+} */
+
+
+/* スクロールダウン動き */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&display=swap');
+
+.scroll_down{
+  position:absolute;
+  bottom: 0px;
+  left: 5%;
 }
+
+.scroll_down a{
+  position: absolute;
+  left: 24px;
+  bottom: 87px;
+  color: #fff;
+  font-size: 14px;
+  font-family: 'Josefin Sans', sans-serif;
+  letter-spacing: .2em;
+  writing-mode: vertical-lr;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.scroll_down:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -4px;
+  width: 11px;
+  height: 11px;
+  margin-left: 12px;
+  border-radius: 50%;
+  background:#fff;
+  animation:
+    circlemove 1.6s ease-in-out infinite,
+    cirlemovehide 1.6s ease-out infinite;
+}
+
+@keyframes circlemove{
+  0%{bottom:160px;}
+  100%{bottom:0px;}
+}
+
+@keyframes cirlemovehide{
+  0%{opacity:0}
+  50%{opacity:1;}
+  80%{opacity:0.9;}
+  100%{opacity:0;}
+}
+
+.scroll_down:after{
+  content:"";
+  position: absolute;
+  bottom:0;
+  left:0;
+  width:2px;
+  height: 160px;
+  margin-left: 12px;
+  background:#fff;
+}
+
+/* スクロールダウン終了 */
+
+
+
+@keyframes infinity-scroll-left {
+  from {
+    transform: translateX(0);
+  }
+    to {
+    transform: translateX(-100%);
+  }
+  }
+  /* .scroll-infinity {
+    position: absolute;
+    top: -23px;
+  } */
+  .scroll-infinity__wrap {
+    display: flex;
+    overflow: hidden;
+  }
+  .scroll-infinity__list {
+    display: flex;
+    list-style: none;
+    padding: 0
+  }
+  .scroll-infinity__list--left {
+    animation: infinity-scroll-left 40s infinite linear 0.5s both;
+  }
+  .scroll-infinity__item {
+    width: calc(100vw / 6);
+  }
+  .scroll-infinity__item>img {
+    width: 100%;
+  }
+  #wave_01.scroll-infinity {
+    position: absolute;
+    top: -140px;
+    margin: 0 calc(50% - 50vw);
+    width: 100vw;
+  }
+  #wave_02.scroll-infinity {
+    position: absolute;
+    top: -26px;
+    margin: 0 calc(50% - 50vw);
+    width: 100vw;
+  }
+
+	@keyframes infinity-scroll-right {
+    from {
+      transform: translateX(-100%);
+    }
+      to {
+      transform: translateX(0%);
+    }
+    }
+    .scroll-infinity__list--right{
+      animation :infinity-scroll-right 60s infinite linear 0.5s both;
+    }
+
+
+
+
+#wave_03.scroll-infinity {
+  position: absolute;
+  top: -25px;
+  margin: 0 calc(50% - 50vw);
+  width: 100vw;
+}
+#wave_04 {
+  transform: scaleY(-1);
+  position: absolute;
+  bottom: -25px;
+  margin: 0 calc(50% - 50vw);
+  width: 100vw;
+}
+#wave_05 {
+  transform: scaleY(-1);
+  position: absolute;
+  bottom: -26px;
+  margin: 0 calc(50% - 50vw);
+  width: 100vw;
+}
+
+
+
+
+.bird_area {
+  width: 50%;
+ position: relative;
+ top: -583px;
+}
+
+.bird {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  transform: rotate(45deg);
+  animation: moving 16s linear infinite;
+}
+
+.bird.-type_2 {
+  animation-delay: 1s;
+}
+.bird.-type_2:before,
+.bird.-type_2:after {
+  animation-delay: -2s;
+}
+
+.bird.-type_3 {
+  animation-delay: 3s;
+}
+
+@keyframes moving {
+  0% {
+    top: 47vh;
+    left: -2vw;
+  }
+  25% {
+    top: 51vh;
+    left: 23vw
+  }
+  100% {
+    top: 47vh;
+    left: 101vw;
+  }
+}
+
+.bird:before, .bird:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #178baf;
+  transform: rotate(-30deg);
+  transform-origin: right bottom;
+}
+
+.bird:before {
+  width: 100%;
+  height: 1px;
+  animation: leftWing 8s linear infinite;
+}
+.bird:after {
+  width: 1px;
+  height: 100%;
+  animation: rightWing 8s linear infinite;
+}
+
+@keyframes leftWing {
+  0%   { transform: rotate(-30deg); }
+  2%   { transform: rotate(-110deg); }
+  4%   { transform: rotate(-30deg); }
+  6%   { transform: rotate(-110deg); }
+  8%   { transform: rotate(-30deg); }
+  10%  { transform: rotate(-110deg); }
+  12%  { transform: rotate(-30deg); }
+  30%  { transform: rotate(-30deg); }
+  42%  { transform: rotate(-35deg); }
+  72%  { transform: rotate(-35deg); }
+  74%  { transform: rotate(10deg); }
+  76%  { transform: rotate(-30deg); }
+  78%  { transform: rotate(-110deg); }
+  80%  { transform: rotate(-30deg); }
+  82%  { transform: rotate(-110deg); }
+  84%  { transform: rotate(-30deg); }
+  86%  { transform: rotate(-110deg); }
+  88%  { transform: rotate(-30deg); }
+  90%  { transform: rotate(-110deg); }
+  92%  { transform: rotate(-30deg); }
+  94%  { transform: rotate(-110deg); }
+  96%  { transform: rotate(-30deg); }
+  98%  { transform: rotate(-110deg); }
+  100% { transform: rotate(-30deg); }
+}
+
+@keyframes rightWing {
+  0%   { transform: rotate(30deg); }
+  2%   { transform: rotate(110deg); }
+  4%   { transform: rotate(30deg); }
+  6%   { transform: rotate(110deg); }
+  8%   { transform: rotate(30deg); }
+  10%  { transform: rotate(110deg); }
+  12%  { transform: rotate(30deg); }
+  30%  { transform: rotate(30deg); }
+  42%  { transform: rotate(35deg); }
+  72%  { transform: rotate(35deg); }
+  74%  { transform: rotate(0deg); }
+  76%  { transform: rotate(30deg); }
+  78%  { transform: rotate(110deg); }
+  80%  { transform: rotate(30deg); }
+  82%  { transform: rotate(110deg); }
+  84%  { transform: rotate(30deg); }
+  86%  { transform: rotate(110deg); }
+  88%  { transform: rotate(30deg); }
+  90%  { transform: rotate(110deg); }
+  92%  { transform: rotate(30deg); }
+  94%  { transform: rotate(110deg); }
+  96%  { transform: rotate(30deg); }
+  98%  { transform: rotate(110deg); }
+  100% { transform: rotate(30deg); }
+}
+
+/****** Base style. ******/
+/* body {
+  overflow: hidden;
+  height: 100vh;
+  margin: 0;
+} */
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* 波形のコードコピーしたらついてきた
@@ -929,9 +1403,11 @@ button {
 
 
 
+/* loading */
 
-
-
+.loading-animation_gif img {
+  width: 100%;
+}
 
 
 

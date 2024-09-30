@@ -139,6 +139,10 @@ h2 {
   background-position-y: -5px;
 }
 
+#top_nav_ham {
+  display: none;
+}
+
 
 
 .contents_area {
@@ -199,6 +203,9 @@ h2 {
 }
 
 /* profile */
+.contents_area.profile_contents {
+  width: 100%;
+}
 #profile {
   background-color: #fff;
   border: 1px solid #173E6A;
@@ -237,7 +244,7 @@ h2 {
   display: flex;
   align-items: center;
   gap: 30px; 
-  margin-bottom: 32px;
+  margin-bottom: 6px;
 }
 #profile .name_area_profile_page {
   align-items: center;
@@ -288,7 +295,7 @@ h2 {
   border-radius: 50px; /* 50pxの角丸 */
   box-shadow: 0 0, 3px 4px 0 0 #fff, 3px 4px 0 1px #173E6A;
   position: absolute;
-  right: 323px;
+  right: 250px;
   border-radius: 40px;
 }
 
@@ -371,8 +378,13 @@ h2 {
 }
 .works_img img {
   object-fit:contain;
-  width:100%;
+  width:99%;
   height:100%;
+  object-position: -29px 67%;
+}
+.works_img.banner_area img{
+  width: 53%;
+  object-position: center;
 }
 
 
@@ -442,8 +454,10 @@ h2 {
   letter-spacing: 0.05px;
   margin: 28px 30px;
 }
-
-.skill_img {
+.skill_img.sp_img {
+  display: none;
+}
+.skill_img.pc_img {
   width: 375px;
   height: 279px;
 }
@@ -648,6 +662,14 @@ button {
 }
 
 /* パララックスエリア */
+.parallax_box {
+  margin-bottom: 40px;
+}
+.parallax_text {
+  display: inline-block;
+  text-align: left;
+}
+
 .parallax_content{
   min-height: 400px;
   background-position: center top;
@@ -676,16 +698,18 @@ button {
 }
 .front_content_text {
   font-weight: bold;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 28px;
 }
 .parallax_content.img_bg_01{
+  text-align: end;
   background-image: url(./images/自分＿ノーマル\ \(新\).jpg);
 }
 .parallax_content.img_bg_02{
   background-image: url(./images/自分＿びっくり（新）.jpg);
 }
 .parallax_content.img_bg_03{
+  text-align: end;
   background-image: url(./images/自分＿メガネ\(新\).jpg);
 }
 
@@ -1029,6 +1053,11 @@ button {
   transform: rotate(45deg);
   box-shadow: none;
 }
+
+.top_nav_btn{
+  display: none;
+}
+
 /* ナビゲーションメニュー 開いた時*/
 .open .ham_nav{
   left: 0;
@@ -1045,13 +1074,32 @@ button {
   margin-bottom: 100px;
 }
 
-/* detail 作品詳細 */
+/* works 作品詳細 */
 .detail_header {
   position: static;
 }
 .mockup_pc {
   margin: 122px auto 80px;
+  display: block;
 }
+
+/* 拡大 */
+.zoomIn{
+	animation-name:zoomInAnime;
+	animation-duration:1s;
+	animation-fill-mode:forwards;
+}
+
+@keyframes zoomInAnime{
+  from {
+	transform: scale(0.9);
+  }
+
+  to {
+      transform: scale(1);
+  }
+}
+
 .mockup_text_area {
   display: flex;
   justify-content: space-between;
@@ -1085,6 +1133,7 @@ button {
 .screenshot {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
 }
 .pc_screen {
   width: 70%;
@@ -1211,7 +1260,7 @@ button {
   }
   #wave_02.scroll-infinity {
     position: absolute;
-    top: -26px;
+    top: -25px;
     margin: 0 calc(50% - 50vw);
     width: 100vw;
   }
@@ -1343,8 +1392,7 @@ button {
   98%  { transform: rotate(-110deg); }
   100% { transform: rotate(-30deg); }
 }
-
-@keyframes rightWing {
+ @keyframes rightWing {
   0%   { transform: rotate(30deg); }
   2%   { transform: rotate(110deg); }
   4%   { transform: rotate(30deg); }
@@ -1379,6 +1427,483 @@ button {
 } */
 
 
+/* 下からフェードイン */
+/*===========
+inview
+===========*/
+
+.fadeIn_up {
+  opacity: 0;
+  transform: translate(0, 50%);
+  transition: 2s;
+}
+.fadeIn_up.is-show {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+/*===========
+.imgBox
+===========*/
+
+.imgBox {
+  text-align: center;
+  margin: 50px 0;
+}
+.imgBox img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+
+/*===========
+.txtBox
+===========*/
+
+.txtBox {
+  text-align: center;
+}
+.txtBox p {
+  font-size: 60px;
+  font-weight: bold;
+  padding: 2em 0;
+  margin: 0;
+}
+
+/*===========
+base
+===========*/
+
+html {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: YuGothic, "游ゴシック体", "Yu Gothic", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-size: 16px;
+  letter-spacing: .025em;
+  line-height: 1.8;
+  margin: 0;
+  padding: 0;
+}
+* {
+  box-sizing: border-box;
+}
+.section {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px 20px 500px;
+  overflow-x: hidden;
+}
+.section p._a {
+  font-size: 12px;
+  font-weight: bold;
+  margin: 30px 0 0;
+}
+.section p._a .link {
+  display: inline-block;
+  color: #607D8B;
+  padding-left: 1.3em;
+  text-indent: -1.3em;
+}
+.section p._a .link:before {
+  content: '';
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-top: 2px solid #607D8B;
+  border-right: 2px solid #607D8B;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  margin-right: 10px;
+}
+
+/* 左からフェードイン */
+/*===========
+inview
+===========*/
+
+.fadeIn_left {
+  opacity: 0;
+  transform: translate(-50%, 0);
+  transition: 3s;
+}
+.fadeIn_left.is-show {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+/*===========
+.imgBox
+===========*/
+
+.imgBox {
+  text-align: center;
+  margin: 50px 0;
+}
+.imgBox img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+
+/*===========
+.txtBox
+===========*/
+
+.txtBox {
+  text-align: center;
+}
+.txtBox p {
+  font-size: 60px;
+  font-weight: bold;
+  padding: 2em 0;
+  margin: 0;
+}
+
+/*===========
+base
+===========*/
+
+html {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: YuGothic, "游ゴシック体", "Yu Gothic", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-size: 16px;
+  letter-spacing: .025em;
+  line-height: 1.8;
+  margin: 0;
+  padding: 0;
+}
+* {
+  box-sizing: border-box;
+}
+.section {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px 20px 500px;
+  overflow-x: hidden;
+}
+.section p._a {
+  font-size: 12px;
+  font-weight: bold;
+  margin: 30px 0 0;
+}
+.section p._a .link {
+  display: inline-block;
+  color: #607D8B;
+  padding-left: 1.3em;
+  text-indent: -1.3em;
+}
+.section p._a .link:before {
+  content: '';
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-top: 2px solid #607D8B;
+  border-right: 2px solid #607D8B;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  margin-right: 10px;
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+  .firstview {
+    background-repeat: no-repeat;
+  }
+  .top_nav {
+    display: none;
+  }
+  #top_nav_ham {
+    display: block;
+  }
+  #navbtn {
+    display: block;
+  }
+  
+
+  #mainvisual h1 {
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    line-height: 47px;
+    font-size: 24px;
+    letter-spacing: -5px;
+  }
+
+  #concept {
+    margin-bottom: 0;
+  }
+
+  #concept .concept_title {
+    font-size: 12px;
+    margin-bottom: 25px;
+  }
+
+  #concept p {
+    font-size: 14px;
+    line-height: 36px;
+    margin-bottom: 50px;
+  }
+
+  #profile {
+    height: 600px;
+    width: 126%;
+    margin-left: -90px;
+    position: relative;
+    margin-bottom: 66px;
+  }
+  .profile_img_area{
+    position: static;
+    margin: 20px auto;
+  }
+  .profile_img_area img {
+    width: 337px;
+    height: 230px;
+  }
+  #profile .name {
+    font-size: 21px;
+  }
+  #profile .name_area {
+    display: block;
+    margin-bottom: 20px;
+  }
+  .profile_right {
+    width: 80%;
+    position: absolute;
+    bottom: 55px;
+    top: auto;
+    right: 48px;
+  }
+  .profile_text {
+    font-size: 14px;
+  }
+  .english_name {
+    font-size: 14px;
+    font-weight: normal;
+  }
+
+  .profile_btn01 {
+    font-size: 14px;
+    margin: -98px -58px;
+  }
+
+  .profile_btn02 {
+    font-size: 15px;
+    padding: 20px 23px;
+    margin-bottom: 82px;
+    box-shadow: 0 0, 4px 5px 0 0 #fff, 4px 5px 0 1px #FD6E50;
+  }
+  .comment {
+    font-size: 10px;
+  }
+  #wave_01.scroll-infinity {
+    /* position: absolute; */
+    top: -116px;
+    /* margin: 0 calc(50% - 50vw);
+    width: 100vw; */
+  }
+  
+  #works {
+    margin-bottom: 120px;
+  }
+  #works h2 {
+    font-size: 24px;
+    margin-bottom: 52px;
+  }
+  .works_text {
+    font-size: 14px;
+  }
+  .works_btn {
+    font-size: 18px;
+  }
+  .works_area {
+    justify-content: center;
+  }
+
+  #wave_02.scroll-infinity {
+    top: -13px;
+}
+#wave_03.scroll-infinity {
+  top: -14px;
+}
+
+#skill {
+  padding: 68px 0 0;
+}
+#skill h2 {
+  font-size: 24px;
+  margin-bottom: 54px;
+}
+.skill_area01 {
+  display: block;
+  margin-bottom: 80px;
+}
+.skill_img {
+  margin: 0 auto;
+}
+
+.skill_img.sp_img {
+  display: inline-block;
+  width: 170px;
+  height: 126px;
+}
+.skill_img.pc_img {
+  display: none;
+}
+.skill_text {
+  font-size: 14px;
+}
+#wave_04.scroll-infinity {
+  bottom: -15px;
+}
+#wave_05.scroll-infinity {
+  bottom: -13px;
+}
+
+#contact h2 {
+  font-size: 24px;
+}
+#contact p {
+  font-size: 13px;
+}
+
+.form-label {
+  font-size: 14px;
+}
+input, textarea {
+  font-size: 14px;
+}
+
+.contact_btn {
+  font-size: 18px;
+}
+
+.message_area div p {
+  font-size: 13px;
+}
+.message_area p {
+  font-size: 13px;
+}
+
+/* profile page */
+.parallax_box {
+  margin-bottom: 0px;
+}
+.parallax_content {
+  font-size: 24px;
+}
+.front_wrapper {
+  display: block;
+}
+.front_content_area {
+  width: 100%;
+}
+.front_content_text {
+  font-size: 14px;
+  margin-bottom: 25px;
+  line-height: 26px;
+  letter-spacing: 0.15rem;
+}
+
+.ribbon1 {
+  font-size: 15px;
+}
+
+#profile_b {
+  margin: 133px -20px 114px 20px;
+}
+.name_profile_page {
+  font-size: 25px;
+  margin-bottom: 0px;
+}
+.english_name_profile_page {
+  margin-bottom: 20px;
+}
+
+#me_and_design {
+  padding-bottom: 256px;
+}
+#me_and_design h2 {
+  font-size: 24px;
+}
+.me_and_design_text .para_2{
+  font-size: 14px;
+}
+.me_and_design_text .para_2:last-child {
+  margin-bottom: 84px;
+}
+#ship_left {
+  bottom: 288px;
+}
+#ship_right {
+  bottom: 288px;
+}
+.ship_and_me {
+  bottom: 328px;
+}
+
+.container {
+  padding: 0 2rem 0px;
+}
+.container h2 {
+  font-size: 24px;
+  margin-bottom: 32px;
+}
+.strong_point_box {
+  padding: 32px 18px;
+}
+
+#strong_ship.ship {
+  top: 412px;
+  left: 20px;
+}
+.island {
+  right: 30px;
+}
+
+/* detail page */
+.contents_area {
+  width: 80%;
+}
+.contents_area h2 {
+  font-size: 24px;
+}
+.mockup_title {
+  font-size: 18px;
+}
+.mockup_text_area {
+  display: block;
+}
+.mockup_text {
+  font-size: 14px;
+}
+.mockup_page_right {
+  width: auto;
+}
+.mockup_page_left {
+  width: auto;
+}
+.mockup_text:last-child {
+  margin-bottom: 40px;
+}
+
+
+
+
+
+
+
+
+}
 
 
 
@@ -1409,6 +1934,91 @@ button {
   width: 100%;
 }
 
+/*========= ローディング画面のためのCSS ===============*/
+#splash {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: #333;
+	z-index: 9999999;
+	text-align:center;
+	color:#fff;
+}
+
+#splash-logo {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+/*========= 画面遷移のためのCSS ===============*/
+
+/*画面遷移アニメーション*/
+.splashbg{
+    display: none;
+}
+
+/*bodyにappearクラスがついたら出現*/
+body.appear .splashbg{
+    display: block;
+    content: "";
+    position:fixed;
+	z-index: 999;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+	left: 0;
+    transform: scaleY(0);
+    background-color: #020202;/*伸びる背景色の設定*/
+	animation-name:PageAnime;
+	animation-duration:1.2s;
+	animation-timing-function:ease-in-out;
+	animation-fill-mode:forwards;
+
+}
+
+@keyframes PageAnime{
+	0% {
+		transform-origin:bottom;
+		transform:scaleY(0);
+	}
+	50% {
+		transform-origin:bottom;
+		transform:scaleY(1);
+	}
+	50.001% {
+		transform-origin:top;
+	}
+	100% {
+		transform-origin:top;
+		transform:scaleY(0);
+	}
+}
+
+/*画面遷移の後現れるコンテンツ設定*/
+
+#container{
+	opacity: 0;/*はじめは透過0に*/
+}
+
+/*bodyにappearクラスがついたら出現*/
+body.appear #container{
+	animation-name:PageAnimeAppear;
+	animation-duration:1s;
+	animation-delay: 0.8s;
+	animation-fill-mode:forwards;
+	opacity: 0;
+}
+
+@keyframes PageAnimeAppear{
+	0% {
+	opacity: 0;
+	}
+	100% {
+	opacity: 1;
+}
+}
 
 
 

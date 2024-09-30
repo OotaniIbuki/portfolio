@@ -26,13 +26,13 @@
   }
   </style>
   
-  
+  <link rel="stylesheet" type="text/css" href="css/4-2-2.css">
 </head>
 
 <body>
-  <div class="loading-animation_gif">
+  <!-- <div class="loading-animation_gif">
     <img src="../portfolio/loading-animation_gif.gif">
-  </div>
+  </div> -->
 
 
 
@@ -42,6 +42,17 @@
   <img src="./images/カンプ書き出し/2x/loading_船_pc.svg">
 </div> -->
 
+<div id="splash">
+  <div id="splash-logo">ローディング</div>
+  <!--/splash--></div>
+  <div class="splashbg"></div><!---画面遷移用-->
+  <div id="container">
+  <p>ここにメインコンテンツが入ります。</p>
+  <!--/container-->
+  <div class="loading-animation_gif">
+    <img src="../portfolio/loading-animation_gif.gif">
+  </div></div>
+  
 
 
 
@@ -59,6 +70,28 @@
 
 
 
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <!--自作のJS-->
+  <script src="js/4-2-2.js"></script>
+  <script>
+    $(window).on('load',function(){
+$("#splash-logo").delay(3500).fadeOut('slow');//ロゴを1.2秒でフェードアウトする記述
 
+//=====ここからローディングエリア（splashエリア）を1.5秒でフェードアウトした後に動かしたいJSをまとめる
+$("#splash").delay(1500).fadeOut('slow',function(){//ローディングエリア（splashエリア）を1.5秒でフェードアウトする記述
+
+$('body').addClass('appear');//フェードアウト後bodyにappearクラス付与
+
+});
+//=====ここまでローディングエリア（splashエリア）を1.5秒でフェードアウトした後に動かしたいJSをまとめる
+
+//=====ここから背景が伸びた後に動かしたいJSをまとめたい場合は
+$('.splashbg').on('animationend', function() { 
+//この中に動かしたいJSを記載
+});
+//=====ここまで背景が伸びた後に動かしたいJSをまとめる
+
+});
+  </script>
 </body>
 </html>

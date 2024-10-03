@@ -1726,6 +1726,7 @@ base
     white-space: pre;
     display: inline-block;
     background: linear-gradient(transparent 0%, #fff 0%);
+    -webkit-writing-mode: vertical-rl;
   }
   #concept {
     margin-bottom: 0;

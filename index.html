@@ -18,16 +18,30 @@
   })(document);
   
 </script>
+<link rel="stylesheet" type="text/css" href="css/4-2-2.css">
 </head>
 
 <body>
+  <!-- <div id="splash">
+    <div id="splash-logo">
+      <div class="loading-animation_gif">
+        <img src="../portfolio/loading-animation_gif.gif">
+      </div>
+    </div>
+    <!--/splash--></div>
+    <!-- <div class="splashbg"></div> --> 
+    <!---画面遷移用-->
+    <!-- <div id="container">
+    <p>ここにメインコンテンツが入ります。 -->
+
 <div class="firstview">
-  <header id="header">
+  <div class="imgBox inview fadeIn_up_a">
+  <header id="header" class="top_page_header">
     <h1>
       <object data="./images/カンプ書き出し/2x/アセット 52.svg" width="254" height="55"> </object>
       </h1>
     <nav class="top_nav">
-      <ul>
+      <ul class="top_header_ul">
         <li><a href="#concept">コンセプト</a></li>
         <li><a href="#works">制作実績</a></li>
         <li><a href="#skill">できること</a></li>
@@ -35,6 +49,7 @@
       </ul>
     </nav>
   </header>
+  </div>
 
   <div class="profile_ham">
     <nav class="ham_nav">
@@ -51,7 +66,7 @@
   <main>
     <div class="imgBox inview fadeIn_up">
     <div id="mainvisual">
-      <h1>“その先”を見据えたデザインで<br>新たな船出を、ともに。</h1>
+      <h1>『その先』を見据えたデザインで<br>新たな船出を、ともに。</h1>
     </div>
     </div>
     
@@ -172,16 +187,16 @@
       <div class="works_text">美容室 LIFE hair design様&emsp;公式サイト</div>
     </div>
     <div class="works_contents">
-      <div class="works_img banner_area">
+      <div class="works_img banner_area" onclick="location.href='work_burger_pop01.html'">
         <img src="../portfolio/images/カンプ書き出し/2x/mockup_burger@2x-80.jpg">
       </div>
-      <div class="works_text">ハンバーガーショップ&emsp;SNS用広告用バナー【POPバージョン】</div>
+      <div class="works_text">ハンバーガーショップ&emsp;SNS用バナー【POPバージョン】</div>
     </div>
     <div class="works_contents">
-      <div class="works_img banner_area">
+      <div class="works_img banner_area" onclick="location.href='work_burger_pop02.html'">
         <img src="../portfolio/images/カンプ書き出し/2x/mockup_burger_pop2@2x-80.jpg">
       </div>
-      <div class="works_text">ハンバーガーショップ&emsp;SNS用広告用バナー【POPバージョン】</div>
+      <div class="works_text">ハンバーガーショップ&emsp;SNS用バナー【POPバージョン】</div>
     </div>
   </div>
   <button class="works_btn" onclick="location.href='works.html'">一覧を見る</button>
@@ -421,7 +436,9 @@
 </div>
 
 
-
+</p>
+    <!--/container-->
+  </div>
 
 
 <footer>
@@ -457,7 +474,9 @@
     document.getElementById("navbtn").onclick = function(){
       document.querySelector('html').classList.toggle('open');
     }
-    </script>
+</script>
+
+
 
 </body>
 </html>

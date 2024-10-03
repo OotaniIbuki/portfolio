@@ -1601,7 +1601,8 @@ inview
 
 .imgBox {
   text-align: center;
-  margin: 50px 0;
+  margin-bottom: 50px ;
+  margin-top: 0;
 }
 .imgBox img {
   max-width: 100%;
@@ -1715,13 +1716,17 @@ base
   }
 
   #mainvisual h1 {
-    -ms-writing-mode: tb-rl;
-    writing-mode: vertical-rl;
     line-height: 47px;
     font-size: 24px;
     letter-spacing: -5px;
   }
-
+  #mainvisual h1 span {
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    white-space: pre;
+    display: inline-block;
+    background: linear-gradient(transparent 0%, #fff 0%);
+  }
   #concept {
     margin-bottom: 0;
   }
@@ -1988,7 +1993,7 @@ input, textarea {
 @media screen and (min-width:375px) and ( max-width:768px) {
   /*　画面サイズが768pxから1024pxまではここを読み込む　*/
 .firstview {
-  width: 110vw;
+  width: 100vw;
   height: 140vh;
 }
 .works_area {

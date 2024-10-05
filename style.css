@@ -88,7 +88,7 @@ h2 {
 .firstview {
   background-image: url(./images/カンプ書き出し/4x/fv_pc@4x-80.jpg);
   background-repeat: no-repeat;
-  height: 156vh;
+  height: 230vh;
   text-align: center;
   background-size: 100%;
   width: 100%;
@@ -248,11 +248,11 @@ h2 {
   font-size: 30px;
   font-weight: bold;
   line-height: 76px;
-  letter-spacing: 0.05px;
+  letter-spacing: 0.1em;
   text-align: center;
 }
 
-/* profile */
+/* profile
 .contents_area.profile_contents {
   width: 100%;
   overflow-x: hidden;
@@ -327,47 +327,84 @@ h2 {
 
 .profile_text p {
   /* あれ？なんで明朝？ */
-  font-family: fot-tsukuardgothic-std, sans-serif; 
+  /* font-family: fot-tsukuardgothic-std, sans-serif; 
   font-size: 14px;
-  line-height: 28.5px;
-}
+  line-height: 28.5px; */
 
 .profile_btn01 {
-  background-color: #173E6A; /* 背景色 */
+    background-color: #173E6A; /* 背景色 */
   color: white; /* 文字色 */
-  padding: 20px 37px; /* パディング */
+  padding: 20px 30px; /* パディング */
   font-family: zen-kaku-gothic-new, sans-serif;
   text-align: center; /* 文字のアライメント */
   text-decoration: none; /* 文字装飾 */
   display: inline-block; /* ボタンの表示方法 */
-  font-size: 18px; /* フォントサイズ */
+  font-size: 20px; /* フォントサイズ */
   font-weight: bold;
-  margin: -276px auto; /* 外側の余白 */
+  margin: -20% -60% 247px 0; /* 外側の余白 */
   cursor: pointer; /* カーソル */
   border: none; /* ボーダーなし */
-  border-radius: 50px; /* 50pxの角丸 */
-  box-shadow: 0 0, 3px 4px 0 0 #fff, 3px 4px 0 1px #173E6A;
-  position: absolute;
-  right: 250px;
-  border-radius: 40px;
+  border-radius: 80px; 
+  box-shadow: 0 0, 5px 6px 0 0 #fff, 5px 6px 0 1px #173E6A;
 }
+
 
 .profile_btn01:hover {
-  background-color: #173E6A;
+  background-color: #FD6E50;
   transition: all 0.5s ease;
+} 
+
+.profile_area {
+  display: flex;
+  background-color: #fff;
+  border: 1px solid #173E6A;
+  border-radius: 21px;
+  padding: 30px;
+  align-items: center;
+}
+.profile_img_area img {
+  border-radius: 4%;
+  margin-left: -80px;
+}
+.profile_right {
+  margin: auto 10px;
+}
+.name_area {
+  font-family: fot-tsukuardgothic-std, sans-serif;
+  gap: 30px;
+  margin-bottom: 28px;
+  display: flex;
+  align-items: baseline;
+}
+.name {
+  font-size: 33px;
+}
+.english_name {
+  font-size: 18px;
+}
+.profile_text p {
+  font-family: fot-tsukuardgothic-std, sans-serif; 
+  font-size: 14px;
+  line-height: 28.5px; 
+  text-align: left;
 }
 
+
+
+
+
+
+
+
 .comment_area {
-  width: 60%;
   display: flex;
-  margin: 0 auto ;
-  /* gap: 170px; */
-  justify-content: space-between;
+  column-gap: 9%;
+  justify-content: center;
 }
 
 .comment {
   font-family: zen-kaku-gothic-new, sans-serif;
-  font-size: 23px;
+  font-size: 18px;
   font-weight: bold;
 }
 
@@ -379,7 +416,7 @@ h2 {
   text-align: center; /* 文字のアライメント */
   text-decoration: none; /* 文字装飾 */
   display: inline-block; /* ボタンの表示方法 */
-  font-size: 36px; /* フォントサイズ */
+  font-size: 30px; /* フォントサイズ */
   font-weight: bold;
   margin: 20px auto 247px; /* 外側の余白 */
   cursor: pointer; /* カーソル */
@@ -1519,7 +1556,7 @@ inview
 
 .imgBox {
   text-align: center;
-  margin: 50px 0;
+  /* margin: 50px 0; */
 }
 .imgBox img {
   max-width: 100%;
@@ -1598,7 +1635,7 @@ inview
 
 .imgBox {
   text-align: center;
-  margin-bottom: 50px ;
+  /* margin-bottom: 50px ; */
   margin-top: 0;
 }
 .imgBox img {
@@ -1667,9 +1704,9 @@ base
   #header ul {
     width: 104%;
   }
-  #profile {
+  /* #profile {
     width: 109%;
-  }
+  } */
 }
 @media screen and (max-width: 1024px)  {
   #header ul {
@@ -1765,7 +1802,7 @@ base
     margin-bottom: 50px;
   }
 
-  #profile {
+  /* #profile {
     height: 600px;
     width: 126%;
     margin-left: -90px;
@@ -1800,8 +1837,28 @@ base
   .english_name {
     font-size: 14px;
     font-weight: normal;
+  } */
+
+  .profile_area {
+    display: block;
+    padding: 24px;
+  }
+  .profile_img_area img {
+    margin-left: 0;
+    width: 70%;
+  }
+  .name_area {
+    display: block;
+    margin-top: 14px;
+  }
+  .name {
+    font-size: 22px;
+    margin-bottom: 6px;
   }
 
+.english_name {
+  font-size: 16px;
+}
   .profile_btn01 {
     font-size: 14px;
     margin: -98px -58px;
@@ -1810,12 +1867,16 @@ base
   .profile_btn02 {
     font-size: 15px;
     padding: 20px 23px;
-    margin-bottom: 82px;
+    margin-bottom: 150px;
     box-shadow: 0 0, 4px 5px 0 0 #fff, 4px 5px 0 1px #FD6E50;
   }
-  .comment {
-    font-size: 10px;
+  .comment_area {
+    margin-top: 16%;
   }
+  .comment {
+    font-size: 12px;
+  }
+
   #wave_01.scroll-infinity {
     /* position: absolute; */
     top: -116px;
@@ -2013,6 +2074,8 @@ input, textarea {
 .mockup_text:last-child {
   margin-bottom: 40px;
 }
+
+
 @media screen and (min-width:375px) and ( max-width:768px) {
   /*　画面サイズが768pxから1024pxまではここを読み込む　*/
 .sp_title_area {
@@ -2024,15 +2087,15 @@ input, textarea {
 }
 .firstview {
   width: 100%;
-  height: 140vh;
+  height: 126vh;
 }
 
 .scroll_down:before {
   left: -4px;
-    width: 11px;
-    height: 11px;
-    margin-left: 11px;
-    margin-bottom: 173px;
+  width: 8px;
+  height: 8px;
+  margin-left: 13px;
+  margin-bottom: 173px;
 }
 .scroll_down a {
   bottom: 265px;
@@ -2049,7 +2112,26 @@ input, textarea {
 }
 
 }
-@media screen and (min-width:376px) and (max-width:478px) {
+
+  @media screen and (min-width:510px) and (max-width:630px){
+  .firstview {
+    height: 104vh;
+  }
+}
+@media screen and (min-width:375px) and (max-width:485px) {
+  .firstview {
+    width: 100%;
+    height: 74vh;
+  }
+  .comment {
+    font-size: 9px;
+  }
+
+@media screen and (min-width:375px) and (max-width:478px) {
+  .firstview {
+    width: 100%;
+    height: 81vh;
+  }
 .scroll_down a {
   bottom: 425px;
   font-size: 10px;
@@ -2063,9 +2145,12 @@ input, textarea {
 }
 
 
+
+
+
 @media screen and (max-width:375px) {
   .firstview {
-    height: 100vh;
+    height: 75vh;
     width: 100%;
   }
   .sp_title_area {

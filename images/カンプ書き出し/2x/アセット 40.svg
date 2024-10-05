@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_2" data-name="レイヤー_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 95.19 400.81">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        letter-spacing: .2em;
+      }
+
+      .cls-3 {
+        letter-spacing: .2em;
+      }
+
+      .cls-3, .cls-4, .cls-2, .cls-5, .cls-6 {
+        fill: #173e6a;
+        font-family: ZenKakuGothicNew-Bold, 'Zen Kaku Gothic New';
+        font-size: 24px;
+        font-weight: 700;
+      }
+
+      .cls-7 {
+        fill: #fff;
+      }
+
+      .cls-4 {
+        letter-spacing: -.3em;
+      }
+
+      .cls-2 {
+        glyph-orientation-vertical: 90deg;
+        text-orientation: sideways-right;
+      }
+
+      .cls-2, .cls-6 {
+        writing-mode: tb;
+      }
+
+      .cls-5, .cls-8 {
+        letter-spacing: -.3em;
+      }
+
+      .cls-6 {
+        glyph-orientation-vertical: 0deg;
+        text-orientation: upright;
+      }
+    </style>
+  </defs>
+  <g id="WSP:トップ">
+    <g>
+      <g>
+        <rect class="cls-7" x="-125.78" y="180.03" width="400.81" height="40.75" transform="translate(275.03 125.78) rotate(90)"/>
+        <text class="cls-2" transform="translate(74.59 5.31)"><tspan x="0" y="0"> </tspan><tspan x="0" y="11.52">その先</tspan><tspan x="0" y="97.92"> </tspan><tspan x="0" y="109.44">を見据えたデザインで</tspan></text>
+        <text class="cls-3" transform="translate(41.84 25.97) scale(1.05 1)"><tspan x="0" y="0">『</tspan></text>
+        <text class="cls-4" transform="translate(82.6 111.49) scale(1.05 1)"><tspan x="0" y="0">』</tspan></text>
+      </g>
+      <g>
+        <rect class="cls-7" x="-126.12" y="183.93" width="293" height="40.75" transform="translate(224.69 183.93) rotate(90)"/>
+        <text class="cls-6" transform="translate(20.38 64.9)"><tspan class="cls-1" x="0" y="0">新たな船出を</tspan><tspan class="cls-1" x="0" y="172.8"> </tspan><tspan class="cls-1" x="0" y="184.32">ともに</tspan><tspan class="cls-8" x="0" y="270.72">。</tspan></text>
+        <text class="cls-5" transform="translate(26.02 242.7)"><tspan x="0" y="0">、</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>

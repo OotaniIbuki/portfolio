@@ -47,9 +47,9 @@ h2 {
 	width: 100%;
 	height: 100%;
 	z-index: 999;
-	background:#eee;
+	background:#173E6A;
 	text-align:center;
-	color:#fff;
+	color:#FD6E50;
 }
 
 /* Loading画像中央配置　*/
@@ -70,17 +70,17 @@ h2 {
 /*アニメーション前の指定*/
 #mask path {
 		fill-opacity: 0;/*最初は透過0で見えない状態*/
-		transition: fill-opacity .5s;/*カラーがつく際のアニメーション0.5秒で変化*/
+		transition: fill-opacity .7s;/*カラーがつく際のアニメーション変化*/
 		fill: none;/*塗りがない状態*/
-		stroke: #333;/*線の色*/
+		stroke: #fff;/*線の色*/
 	}
 
 /*アニメーション後に.doneというクラス名がで付与された時の指定*/
 #mask.done path{
-	  fill: #333;/*塗りの色*/
+	  fill: #fff;/*塗りの色*/
 	  fill-opacity: 1;/*透過1で見える状態*/
 	  stroke: none;/*線の色なし*/
-	}
+}
 
 
 
@@ -220,6 +220,9 @@ h2 {
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
 }
+.sp_title_area {
+  display: none;
+}
 
 
 
@@ -350,7 +353,7 @@ h2 {
 }
 
 .profile_btn01:hover {
-  background-color: #3e8e41;
+  background-color: #173E6A;
   transition: all 0.5s ease;
 }
 
@@ -769,13 +772,16 @@ button {
 .parallax_content.img_bg_01{
   text-align: end;
   background-image: url(./images/自分＿ノーマル\ \(新\).jpg);
+  background-size: cover;
 }
 .parallax_content.img_bg_02{
   background-image: url(./images/自分＿びっくり（新）.jpg);
+  background-size: cover;
 }
 .parallax_content.img_bg_03{
   text-align: end;
   background-image: url(./images/自分＿メガネ\(新\).jpg);
+  background-size: cover;
 }
 
 .ribbon1 {
@@ -1681,6 +1687,9 @@ base
   .top_nav {
     display: none;
   }
+  #navbtn {
+    display: block;
+  }
   #wave_02.scroll-infinity {
     top: -14px;
   }
@@ -1693,6 +1702,7 @@ base
 @media screen and (max-width: 768px) {
   .firstview {
     height: 126vh;
+    width: 100%;
   }
 
   #top_nav_ham {
@@ -1706,7 +1716,7 @@ base
     height: 110vh;
   }
 
-  #mainvisual h1 {
+  /* #mainvisual h1 {
     line-height: 47px;
     font-size: 24px;
     letter-spacing: -5px;
@@ -1718,7 +1728,28 @@ base
     display: inline-block;
     background: linear-gradient(transparent 0%, #fff 0%);
     -webkit-writing-mode: vertical-rl;
+  } */
+
+  #mainvisual h1 span {
+    display: none;
   }
+  .sp_title_area {
+    display: block;
+  }
+  .sp_title_area {
+    display: flex;
+    width: 7%;
+    gap: 16%;
+    margin: -19% 42% 0 50%;
+    flex-direction: row-reverse;
+  }
+  .sp_title_right {
+    object-fit: contain;
+  }
+  .sp_title_left {
+    object-fit: contain;
+  }
+  
   #concept {
     margin-bottom: 0;
   }
@@ -1984,10 +2015,32 @@ input, textarea {
 }
 @media screen and (min-width:375px) and ( max-width:768px) {
   /*　画面サイズが768pxから1024pxまではここを読み込む　*/
+.sp_title_area {
+    display: flex;
+    width: 8%;
+    gap: 16%;
+    margin: -13% 42% 0 50%;
+    flex-direction: row-reverse;
+}
 .firstview {
-  width: 100vw;
+  width: 100%;
   height: 140vh;
 }
+
+.scroll_down:before {
+  left: -4px;
+    width: 11px;
+    height: 11px;
+    margin-left: 11px;
+    margin-bottom: 173px;
+}
+.scroll_down a {
+  bottom: 265px;
+}
+.scroll_down:after {
+  bottom: 180px;
+}
+
 .works_area {
   justify-content: center;
 }
@@ -1996,12 +2049,28 @@ input, textarea {
 }
 
 }
-
+@media screen and (min-width:376px) and (max-width:478px) {
+.scroll_down a {
+    bottom: 454px;
+}
+.scroll_down:before {
+  margin-bottom: 360px;
+}
+.scroll_down:after {
+  bottom: 368px;
+}
+}
 
 
 @media screen and (max-width:375px) {
   .firstview {
     height: 100vh;
+    width: 100%;
+  }
+  .sp_title_area {
+    width: 9%;
+    gap: 16%;
+    margin: -31% 42% 0 50%;
   }
   #header.top_page_header {
     padding: 18px 0 0 0 ;
@@ -2092,12 +2161,12 @@ input, textarea {
 
 /* loading */
 
-.loading-animation_gif img {
+/* .loading-animation_gif img {
   width: 100%;
-}
+} */
 
 /*========= ローディング画面のためのCSS ===============*/
-#splash {
+/* #splash {
 	position: fixed;
 	width: 100%;
 	height: 100%;
@@ -2112,7 +2181,7 @@ input, textarea {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-}
+} */
 
 /*========= 画面遷移のためのCSS ===============*/
 
@@ -2132,7 +2201,7 @@ body.appear .splashbg{
     top: 0;
 	left: 0;
     transform: scaleY(0);
-    background-color: #020202;/*伸びる背景色の設定*/
+    background-color: lightcoral;/*伸びる背景色の設定*/
 	animation-name:PageAnime;
 	animation-duration:1.2s;
 	animation-timing-function:ease-in-out;

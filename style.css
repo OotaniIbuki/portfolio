@@ -2051,13 +2051,14 @@ input, textarea {
 }
 @media screen and (min-width:376px) and (max-width:478px) {
 .scroll_down a {
-    bottom: 454px;
+  bottom: 425px;
+  font-size: 10px;
 }
 .scroll_down:before {
-  margin-bottom: 360px;
+  margin-bottom: 311px;
 }
 .scroll_down:after {
-  bottom: 368px;
+  bottom: 318px;
 }
 }
 
@@ -2078,6 +2079,19 @@ input, textarea {
   #navbtn {
     right: 20px;
   }
+
+  .scroll_down a {
+    bottom: 440px;
+    font-size: 10px;
+  }
+  .scroll_down:before {
+    margin-bottom: 325px;
+  }
+  .scroll_down:after {
+    bottom: 332px;
+  }
+
+
   .works_img {
     width: 100%;
     margin: 0 auto 10px;

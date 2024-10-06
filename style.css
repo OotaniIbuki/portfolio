@@ -49,7 +49,6 @@ h2 {
 	z-index: 999;
 	background:#173E6A;
 	text-align:center;
-	color:#FD6E50;
 }
 
 /* Loading画像中央配置　*/
@@ -69,7 +68,8 @@ h2 {
 
 /*アニメーション前の指定*/
 #mask path {
-		fill-opacity: 0;/*最初は透過0で見えない状態*/
+		fill-opacity: 0;
+    /*最初は透過0で見えない状態*/
 		transition: fill-opacity .7s;/*カラーがつく際のアニメーション変化*/
 		fill: none;/*塗りがない状態*/
 		stroke: #fff;/*線の色*/
@@ -116,6 +116,10 @@ h2 {
   display: flex;
     width: 104%;
     justify-content: space-between;
+}
+
+.top_header_ul li span {
+  
 }
 
 #header li {
@@ -191,11 +195,17 @@ h2 {
 }
 
 
-
+.contents_area_works {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
 .contents_area {
-  width: 80%;
+  /* width: 80%; */
   margin: 0 auto;
   text-align: center;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 /* mainvisual */
@@ -360,11 +370,13 @@ h2 {
   border: 1px solid #173E6A;
   border-radius: 21px;
   padding: 30px;
+  width: 90%;
+  margin: 0 auto;
   align-items: center;
 }
 .profile_img_area img {
   border-radius: 4%;
-  margin-left: -80px;
+  margin-left: -114px;
 }
 .profile_right {
   margin: auto 10px;
@@ -445,6 +457,8 @@ h2 {
 }
 
 .works_area {
+  width: 80%;
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -564,7 +578,7 @@ h2 {
 }
 
 #contact {
-  margin: 174px 0 221px;
+  margin: 174px 3% 221px;
 }
 
 #contact h2 {
@@ -747,10 +761,6 @@ button {
   height: 100px;
 }
 
-/* できないー */
-/* .profile_header li {
-  font-family: fot-tsukuardgothic-std, sans-serif;
-} */
 
 .profile_header {
   position: fixed;
@@ -798,7 +808,7 @@ button {
   justify-content: space-between;
 }
 .front_content_area {
-  width: 49%;
+  width: 47%;
 }
 .front_content_text {
   font-weight: bold;
@@ -883,19 +893,30 @@ button {
   margin-bottom: 32px;
   color: #fff;
 }
-
+#profile_b .name_area_profile_page {
+  color: #fff;
+}
 #profile_b .name {
   font-size: 33px;
   font-weight: normal;
 }
+#profile_b .name_profile_page {
+  margin-bottom: 1%;
+  font-size: 33px;
+  font-weight: normal;
+  color: #fff;
+}
 
-#profile_b .english_name {
+#profile_b .english_name_profile_page {
   font-size: 18px;
   font-weight: normal;
+  margin-bottom: 1%;
 }
+
 
 #profile_b .profile_text p {
   font-family: fot-tsukuardgothic-std, sans-serif; 
+  text-align: center;
   font-size: 14px;
   line-height: 28.5px;
   color: #fff;
@@ -1167,6 +1188,13 @@ button {
 }
 .works_page p {
   margin-bottom: 100px;
+}
+.works_page_contents {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 80px;
 }
 
 /* works 作品詳細 */
@@ -1694,11 +1722,16 @@ base
   margin-right: 10px;
 }
 
-@media screen and (max-width: 1276px) {
+@media screen and (max-width: 1266px) {
+  .works_page_contents {
+    justify-content: center;
+  }
   .works_area {
     justify-content: center;
   }
 }
+
+
 
 @media screen and (min-width: 1025px) and (max-width: 1252px) {
   #header ul {
@@ -2003,12 +2036,12 @@ input, textarea {
 #profile_b {
   margin: 133px -20px 114px 20px;
 }
-.name_profile_page {
+#profile_b .name_profile_page {
   font-size: 25px;
-  margin-bottom: 0px;
+  margin-bottom: 2%;
 }
-.english_name_profile_page {
-  margin-bottom: 20px;
+#profile_b .english_name_profile_page {
+  margin-bottom: 3%;
 }
 
 #me_and_design {
@@ -2050,11 +2083,14 @@ input, textarea {
 }
 
 /* detail page */
-.contents_area {
-  width: 80%;
+.contents_area_detail {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
 }
-.contents_area h2 {
+.contents_area_detail h2 {
   font-size: 24px;
+  text-align: center;
 }
 .mockup_title {
   font-size: 18px;
@@ -2062,17 +2098,20 @@ input, textarea {
 .mockup_text_area {
   display: block;
 }
-.mockup_text {
-  font-size: 14px;
-}
 .mockup_page_right {
   width: auto;
 }
 .mockup_page_left {
   width: auto;
 }
+/* 
+.mockup_text {
+  font-size: 14px;
+} */
+
 .mockup_text:last-child {
   margin-bottom: 40px;
+}
 }
 
 
@@ -2104,20 +2143,24 @@ input, textarea {
   bottom: 180px;
 }
 
-.works_area {
-  justify-content: center;
-}
-.works_img {
-  width: auto;
-}
+.contents_area_works {
 
 }
 
-  @media screen and (min-width:510px) and (max-width:630px){
+
+}
+
+@media screen and (min-width:510px) and (max-width:630px){
   .firstview {
     height: 104vh;
   }
 }
+@media screen and (max-width:550px) {
+.works_img {
+  width: 100%;
+}
+}
+
 @media screen and (min-width:375px) and (max-width:485px) {
   .firstview {
     width: 100%;
@@ -2216,7 +2259,9 @@ input, textarea {
 
 
 
-
+     #profile_b .english_name_profile_page {
+      font-size: 13px;
+    }
 
 
 
@@ -2285,12 +2330,12 @@ input, textarea {
 /*========= 画面遷移のためのCSS ===============*/
 
 /*画面遷移アニメーション*/
-.splashbg{
+/* .splashbg{
     display: none;
-}
+} */
 
 /*bodyにappearクラスがついたら出現*/
-body.appear .splashbg{
+/* body.appear .splashbg{
     display: block;
     content: "";
     position:fixed;
@@ -2301,14 +2346,14 @@ body.appear .splashbg{
 	left: 0;
     transform: scaleY(0);
     background-color: lightcoral;/*伸びる背景色の設定*/
-	animation-name:PageAnime;
+	/* animation-name:PageAnime;
 	animation-duration:1.2s;
 	animation-timing-function:ease-in-out;
-	animation-fill-mode:forwards;
+	animation-fill-mode:forwards; */
 
-}
+*/
 
-@keyframes PageAnime{
+/* @keyframes PageAnime{
 	0% {
 		transform-origin:bottom;
 		transform:scaleY(0);
@@ -2324,7 +2369,7 @@ body.appear .splashbg{
 		transform-origin:top;
 		transform:scaleY(0);
 	}
-}
+} */
 
 /*画面遷移の後現れるコンテンツ設定*/
 

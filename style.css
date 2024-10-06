@@ -68,6 +68,8 @@ h2 {
 
 /*アニメーション前の指定*/
 #mask path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
 		fill-opacity: 0;
     /*最初は透過0で見えない状態*/
 		transition: fill-opacity .7s;/*カラーがつく際のアニメーション変化*/
@@ -86,7 +88,7 @@ h2 {
 
 /* ヘッダー */
 .firstview {
-  background-image: url(./images/カンプ書き出し/4x/fv_pc@4x-80.jpg);
+  background-image: url(./images/firstview.png);
   background-repeat: no-repeat;
   height: 230vh;
   text-align: center;
@@ -118,8 +120,11 @@ h2 {
     justify-content: space-between;
 }
 
-.top_header_ul li span {
-  
+
+.top_header_ul li:last-of-type {
+  background-color: #173E6A;
+  padding: 1%;
+  border-radius: 21px;
 }
 
 #header li {
@@ -140,6 +145,7 @@ h2 {
   font-size: 16px;
   color: #fff;
 }
+
   /* display: block;
   height: 100%;
   display: flex;
@@ -235,8 +241,25 @@ h2 {
 }
 
 
+/* コンタクトボタン */
+.btn--orange,
+a.btn--orange {
+  color: #fff;
+  background-color: #eb6100;
+}
+.btn--orange:hover,
+a.btn--orange:hover {
+  color: #fff;
+  background: #f56500;
+}
 
-
+a.btn--radius {
+  border-radius: 50px 0 0 50px;
+  padding: 1%;
+  position: fixed;
+  right: 0;
+  z-index: 100;
+}
 
 
 /* concept */
@@ -517,9 +540,10 @@ h2 {
 }
 
 .works_btn:hover {
-  background-color: #3e8e41;
+  background-color: #FD6E50;
   transition: all 0.5s ease;
-}
+} 
+
 
 /* skill */
 #skill {
@@ -577,7 +601,7 @@ h2 {
   height: 279px;
 }
 
-#contact {
+/* #contact {
   margin: 174px 3% 221px;
 }
 
@@ -593,20 +617,21 @@ h2 {
 .contact_form {
   display: flex;
   margin-bottom: 18px;
-}
+} */
 
-.form_area {
+/* .form_area {
   background-color: lightgray;
   width: 693px;
   height: 66px;
   border-radius: 16px;
   padding: 24px 0 0 24px ;
-}
+} */
+
 
 
 
 /* レイアウト */
-form {
+/* form {
   width: 70%;
   margin: 0 auto;
 }
@@ -635,9 +660,117 @@ form {
   font-weight: bold;
   color: #fff;
   background-color: #166ab5;
+} */
+
+/* copy  form */
+#contact {
+  margin: 174px 3% 221px;
 }
 
+#contact h2 {
+  margin-bottom: 60px;
+}
+#contact p {
+  margin-bottom: 54px;
+  line-height: 28px;
+}
+.c-form {
+	max-width: 90%;
+	margin: 0 auto;
+}
+.c-form__item {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	margin-bottom: 20px;
+}
+.c-form__label,
+.c-form__input {
+	padding: 10px;
+}
+.c-form__label {
+	width: 90%;
+  text-align: left;
+}
+.c-form__input {
+	width: 90%;
+	font-size: 16px;
+	border: none;
+	border-radius: 4px;
+  background-color: rgb(242, 244, 245);
+  border-radius: 4px;
+}
 
+.c-form__input:focus-visible {
+	outline:#FD6E50 auto 1px;
+}
+.c-form__required {
+	color: #fff;
+	background-color: rgb(22, 106, 181);
+	border-radius: 4px;
+	padding: 2px;
+	margin: 0 0 0 18px;
+}
+textarea.c-form__input {
+	height: 160px;
+  letter-spacing: 0.1em;
+}
+.c-form__submit {
+	text-align: center;
+}
+
+.c-form__submit button {
+background-color: #173E6A; /* 背景色 */
+color: white; /* 文字色 */
+padding: 17px 62px; /* パディング */
+font-family: fot-tsukuardgothic-std, sans-serif; 
+text-align: center; /* 文字のアライメント */
+text-decoration: none; /* 文字装飾 */
+display: inline-block; /* ボタンの表示方法 */
+font-size: 30px; /* フォントサイズ */
+font-weight: normal;
+margin-top: 92px;
+cursor: pointer; /* カーソル */
+border: none; /* ボーダーなし */
+border-radius: 50px; /* 50pxの角丸 */
+box-shadow: 0 0, 3px 4px 0 0 #fff, 3px 4px 0 1px #173E6A;
+}
+
+.c-form__submit button:hover {
+  background-color: #FD6E50;
+  transition: all 0.5s ease;
+} 
+/* .c-form__submit button {
+	font-size: 18px;
+	font-weight: bold;
+	color: #fff;
+	background-color: green;
+	border: solid 1px green;
+	border-radius: 4px;
+	padding: 5px 32px;
+	transition: 0.4s;
+	cursor: pointer;
+}
+.c-form__submit button:hover {
+	color: green;
+	background-color: transparent;
+} */
+
+.thanks_page_message {
+  margin-top: 15%;
+}
+.thanks_page_title {
+  font-size: 42px;
+  margin-bottom: 50px;
+}
+.thanks_page_text {
+  font-size: 24px;
+  letter-spacing: 0.1em;
+  line-height: 1.5em;
+  font-weight: normal;
+}
+
+}
 
 
 
@@ -666,7 +799,7 @@ select {
   font-size: 16px;
   color: #333;
 }
-button {
+/* button {
   cursor: pointer;
   margin-top: 30px;
   padding: 15px 45px;
@@ -675,7 +808,7 @@ button {
   color: #fff;
   font-weight: bold;
   background-color: #166ab5;
-}
+} */
 
 
 
@@ -1786,6 +1919,17 @@ base
     height: 110vh;
   }
 
+  a.btn--radius {
+    border-radius: 25px 0 0 25px;
+    font-size: 13px;
+    padding: 2% 1% 2% 2%;
+    position: fixed;
+    right: 0;
+    z-index: 100;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+  }
+
   /* #mainvisual h1 {
     line-height: 47px;
     font-size: 24px;
@@ -1988,12 +2132,11 @@ base
 #contact p {
   font-size: 13px;
 }
-
-.form-label {
-  font-size: 14px;
+.c-form {
+  max-width: 100%;
 }
-input, textarea {
-  font-size: 14px;
+.c-form__submit button {
+  font-size: 24px;
 }
 
 
@@ -2060,9 +2203,6 @@ input, textarea {
 .me_and_design_text .para_2:last-child {
   margin-bottom: 210px;
 }
-}
-
-
 .container {
   padding: 0 2rem 0px;
 }
@@ -2081,6 +2221,10 @@ input, textarea {
 .island {
   right: 30px;
 }
+
+}
+
+
 
 /* detail page */
 .contents_area_detail {
@@ -2146,18 +2290,34 @@ input, textarea {
 .contents_area_works {
 
 }
-
-
 }
+
+
 
 @media screen and (min-width:510px) and (max-width:630px){
   .firstview {
     height: 104vh;
   }
+  .thanks_page_title {
+    font-size: 36px;
+  }
+  .thanks_page_text {
+    font-size: 20px;
+  }
 }
 @media screen and (max-width:550px) {
 .works_img {
   width: 100%;
+}
+.form-row {
+  display: block;
+}
+
+.thanks_page_title {
+  font-size: 24px;
+}
+.thanks_page_text {
+  font-size: 18px;
 }
 }
 
@@ -2184,6 +2344,13 @@ input, textarea {
 }
 .scroll_down:after {
   bottom: 318px;
+}
+a.btn--radius {
+  font-size: 12px;
+  padding: 2% 1% 4% 2%;
+}
+.c-form__submit button {
+  font-size: 18px;
 }
 }
 
@@ -2219,6 +2386,10 @@ input, textarea {
     bottom: 332px;
   }
 
+  a.btn--radius {
+    font-size: 12px;
+    padding: 2% 1% 4% 2%;
+  }
 
   .works_img {
     width: 100%;
@@ -2233,8 +2404,11 @@ input, textarea {
     margin: 0 10%;
   }
 
+  .c-form__submit button {
+    font-size: 16px;
+  }
 
-  .form-row {
+  /* .form-row {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2243,7 +2417,7 @@ input, textarea {
   }
   .form-label {
   margin-bottom: 10px;
-  }
+  } */
 
      #profile_footer {
       width: 78%;

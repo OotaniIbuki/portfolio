@@ -120,6 +120,9 @@ h2 {
     justify-content: space-between;
 }
 
+.top_header_ul span {
+  position: relative;
+}
 
 .top_header_ul li:last-of-type {
   background-color: #173E6A;
@@ -145,6 +148,7 @@ h2 {
   font-size: 16px;
   color: #fff;
 }
+
 
   /* display: block;
   height: 100%;
@@ -188,12 +192,22 @@ h2 {
 } */
 
 .top_nav a:hover {
-  transition: 0.5s;
-  background-image: url(./images/カンプ書き出し/2x/グロナビ太陽_pc.svg);
+  color: #FD6E50;
+  transition: all 0.3s ease;
+}
+
+.top_nav a:hover span::after {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 20px;
+  transition: all 0.3s ease;
+  background-image: url(./images/image/2x/hover_sun.svg);
   background-size: contain; 
   background-repeat: no-repeat;
-  background-position-x: 50px;
-  background-position-y: -5px;
+  position: absolute;
+  top: -6px;
+  left: 96%;
 }
 
 #top_nav_ham {
@@ -250,7 +264,8 @@ a.btn--orange {
 .btn--orange:hover,
 a.btn--orange:hover {
   color: #fff;
-  background: #f56500;
+  background: #173E6A;
+  transition: all 0.5s ease;
 }
 
 a.btn--radius {
@@ -363,6 +378,36 @@ a.btn--radius {
   /* font-family: fot-tsukuardgothic-std, sans-serif; 
   font-size: 14px;
   line-height: 28.5px; */
+
+.profile_top_nav li{
+    margin-left: 35px;
+    position: relative
+  }
+.profile_top_nav a {
+  font-family: fot-tsukuardgothic-std, sans-serif;
+  font-size: 16px;
+  color: #173E6A;
+  font-weight: bold;
+}
+.profile_top_nav a:hover {
+  color: #FD6E50;
+  transition: all 0.3s ease;
+}
+
+.profile_top_nav a:hover span::after {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 20px;
+  /* transition: all 0.3s ease; */
+  background-image: url(./images/image/2x/hover_sun.svg);
+  background-size: contain; 
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -10px;
+  left: 95%;
+  z-index: 100;
+}
 
 .profile_btn01 {
     background-color: #173E6A; /* 背景色 */
@@ -492,7 +537,7 @@ a.btn--radius {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
   -webkit-transition: all 0.4s;
-  transition: all 0.4s;
+  transition: all 0.5s;
 }
 
 .works_img {
@@ -694,6 +739,7 @@ a.btn--radius {
 }
 .c-form__input {
 	width: 90%;
+  padding: 2%;
 	font-size: 16px;
 	border: none;
 	border-radius: 4px;
@@ -886,6 +932,7 @@ select {
 .copylight {
   font-size: 10px;
   text-align: center;
+  margin-bottom: 10px;
 }
 
 /* プロフィールページ */
@@ -903,10 +950,10 @@ select {
   background-color: #fff;
 }
 
-.profile_header .top_nav a {
+/* .profile_header .top_nav a {
   color: #173E6A;
   font-weight: bold;
-}
+} */
 
 /* パララックスエリア */
 .parallax_box {
@@ -914,6 +961,9 @@ select {
 }
 .parallax_text {
   display: inline-block;
+}
+.parallax_text_middle {
+  display: block;
   text-align: left;
 }
 
@@ -951,18 +1001,21 @@ select {
 }
 .parallax_content.img_bg_01{
   text-align: end;
-  background-image: url(./images/自分＿ノーマル\ \(新\).jpg);
+  background-image: url(./images/ootani_01.jpg);
   background-size: cover;
+  width: 100%;
 }
 .parallax_content.img_bg_02{
-  background-image: url(./images/自分＿びっくり（新）.jpg);
+  text-align: end;
+  background-image: url(./images/ootani_02.jpg);
   background-size: cover;
 }
 .parallax_content.img_bg_03{
   text-align: end;
-  background-image: url(./images/自分＿メガネ\(新\).jpg);
+  background-image: url(./images/ootani_03.jpg);
   background-size: cover;
 }
+
 
 .ribbon1 {
   display: inline-block;
@@ -1143,12 +1196,13 @@ select {
 #strong_ship.ship {
   position: absolute;
   top: 404px;
+  left: 2%;
 }
 .island {
   width: 112px;
   object-fit: cover;
   position: absolute;
-  right: 0px;
+  right: 2%;
   top: 340px;
   animation: ship 3s infinite;
 }
@@ -1273,6 +1327,7 @@ select {
   height: 20px;
   cursor: pointer;
   z-index: 500;
+  margin-top: 25px;
 }
 
 #navbtn::before,
@@ -1335,7 +1390,11 @@ select {
   position: static;
 }
 .mockup_pc {
-  margin: 122px auto 80px;
+  margin: 122px auto 80px -3%;
+  display: block;
+}
+.mockup_sp {
+  margin: 122px auto;
   display: block;
 }
 
@@ -1890,6 +1949,9 @@ base
   .top_nav {
     display: none;
   }
+  .profile_top_nav {
+    display: none;
+  }
   #navbtn {
     display: block;
   }
@@ -1921,7 +1983,7 @@ base
 
   a.btn--radius {
     border-radius: 25px 0 0 25px;
-    font-size: 13px;
+    font-size: 16px;
     padding: 2% 1% 2% 2%;
     position: fixed;
     right: 0;
@@ -2319,6 +2381,12 @@ base
 .thanks_page_text {
   font-size: 18px;
 }
+#strong_ship.ship {
+  display: none;
+}
+.island {
+  display: none;
+}
 }
 
 @media screen and (min-width:375px) and (max-width:485px) {
@@ -2346,8 +2414,8 @@ base
   bottom: 318px;
 }
 a.btn--radius {
-  font-size: 12px;
-  padding: 2% 1% 4% 2%;
+  font-size: 16px;
+  padding: 2% 2% 5% 3%;
 }
 .c-form__submit button {
   font-size: 18px;
@@ -2387,8 +2455,8 @@ a.btn--radius {
   }
 
   a.btn--radius {
-    font-size: 12px;
-    padding: 2% 1% 4% 2%;
+    font-size: 18px;
+    padding: 2% 2% 5% 3%;
   }
 
   .works_img {

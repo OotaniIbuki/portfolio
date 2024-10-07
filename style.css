@@ -1141,7 +1141,7 @@ select {
   object-fit: cover;
   position: absolute;
   right: 95px;
-  bottom: 72px;
+  bottom: 122%;
   animation: ship 3s infinite;
 }
 
@@ -2420,6 +2420,9 @@ a.btn--radius {
 .c-form__submit button {
   font-size: 18px;
 }
+.parallax_content {
+  background-attachment: scroll;
+  }
 }
 
 
@@ -2476,45 +2479,24 @@ a.btn--radius {
     font-size: 16px;
   }
 
-  /* .form-row {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  border-bottom: 1px solid #f2f4f5;
+  #profile_footer {
+  width: 78%;
   }
-  .form-label {
-  margin-bottom: 10px;
-  } */
-
-     #profile_footer {
-      width: 78%;
-     }
-     .works_btn {
-      font-size: 16px;
-     }
-
-     .ribbon1 {
-      font-size: 13px;
-      padding: 0 26px;
-     }
-
-
-
-     #profile_b .english_name_profile_page {
-      font-size: 13px;
-    }
-
-
-
-
-
-
-
-
-
+  .works_btn {
+  font-size: 16px;
   }
 
+  .parallax_content {
+  background-attachment: scroll;
+  }
+  .ribbon1 {
+  font-size: 13px;
+  padding: 0 26px;
+  }
+#profile_b .english_name_profile_page {
+      font-size: 13px;
+  }
+}
 
 
 
@@ -2613,29 +2595,6 @@ a.btn--radius {
 	}
 } */
 
-/*画面遷移の後現れるコンテンツ設定*/
-
-#container{
-	opacity: 0;/*はじめは透過0に*/
-}
-
-/*bodyにappearクラスがついたら出現*/
-body.appear #container{
-	animation-name:PageAnimeAppear;
-	animation-duration:1s;
-	animation-delay: 0.8s;
-	animation-fill-mode:forwards;
-	opacity: 0;
-}
-
-@keyframes PageAnimeAppear{
-	0% {
-	opacity: 0;
-	}
-	100% {
-	opacity: 1;
-}
-}
 
 
 

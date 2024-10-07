@@ -464,7 +464,7 @@ a.btn--radius {
 }
 .profile_text p {
   font-family: fot-tsukuardgothic-std, sans-serif; 
-  font-size: 14px;
+  font-size: 16px;
   line-height: 28.5px; 
   text-align: left;
 }
@@ -1255,7 +1255,7 @@ select {
   margin-bottom: 36px;
 }
 .strong_point_text {
-  font-size: 13px;
+  font-size: 14px;
   letter-spacing: 0.07em;
   line-height: 23px;
 }
@@ -1579,7 +1579,7 @@ select {
   }
   #wave_02.scroll-infinity {
     position: absolute;
-    top: -26px;
+    top: -25px;
     margin: 0 calc(50% - 50vw);
     width: 100vw;
   }

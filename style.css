@@ -9,6 +9,7 @@ body {
   font-weight: bold;
   /* background-image: url(./images/カンプ書き出し/4x/fv_pc@4x-80.jpg); */
   max-width: 100%;
+  overflow-x: hidden;
 }
 
 a {
@@ -88,11 +89,12 @@ h2 {
 
 /* ヘッダー */
 .firstview {
-  background-image: url(./images/firstview.png);
+  background-image: url(./images/firstview2.png);
   background-repeat: no-repeat;
-  height: 230vh;
+  min-height: 1700px;
+  background-position: center top;
   text-align: center;
-  background-size: 100%;
+  background-size: contain;
   width: 100%;
 }
 
@@ -279,27 +281,25 @@ a.btn--radius {
 
 /* concept */
 
-#concept {
-  margin-bottom: 192px;
-}
 
-#concept .concept_title {
+.top_concept {
+  margin-top: 63%;
+  margin-bottom: 10%;
+}
+.concept_title {
   font-size: 14px;
   font-weight: bold;
   text-align: center;
-  margin-bottom: 82px;
+  margin-bottom: 30px;
 }
-
-#concept p {
-  /* あれ？なんで明朝？ */
-  font-family: fot-tsukuardgothic-std, sans-serif; 
-  font-size: 30px;
-  font-weight: bold;
-  line-height: 76px;
-  letter-spacing: 0.1em;
-  text-align: center;
+.top_concept p {
+  font-family: fot-tsukuardgothic-std, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 76px;
+    letter-spacing: 0.1em;
+    text-align: center;
 }
-
 /* profile
 .contents_area.profile_contents {
   width: 100%;
@@ -486,6 +486,10 @@ a.btn--radius {
   font-family: zen-kaku-gothic-new, sans-serif;
   font-size: 18px;
   font-weight: bold;
+  transform: rotate(-7deg);
+}
+.comment:nth-of-type(2) {
+  transform: rotate(7deg);
 }
 
 .profile_btn02 {
@@ -518,6 +522,7 @@ a.btn--radius {
 #works {
   margin-bottom: 225px;
   position: relative;
+  text-align: center;
 }
 
 #works h2 {
@@ -550,12 +555,12 @@ a.btn--radius {
 }
 .works_img img {
   object-fit:contain;
-  width:96%;
+  width:95%;
   height:100%;
-  object-position: -29px 67%;
+  object-position: 2px 67%;
 }
 .works_img.banner_area img{
-  width: 53%;
+  padding: 2%;
   object-position: center;
 }
 
@@ -913,7 +918,7 @@ select {
 }
 
 .thanks_sun_pc {
-  width: 106px;
+  width: 30%;
   height: 95px;
   position: absolute;
   top: -64px;
@@ -1764,7 +1769,7 @@ inview
 .fadeIn_up_a {
   opacity: 0;
   transform: translate(0, 50%);
-  transition: 8s;
+  transition: 12s;
 }
 .fadeIn_up_a.is-show {
   transform: translate(0, 0);
@@ -2213,13 +2218,20 @@ base
 .message_area p {
   font-size: 13px;
 }
-
+.thanks_sun_pc {
+  width: 32%;
+  height: 95px;
+  position: absolute;
+  top: -43px;
+  right: -49px;
+}
 /* profile page */
 .parallax_box {
   margin-bottom: 0px;
 }
 .parallax_content {
-  font-size: 24px;
+  font-size: 21px;
+  line-height: 30px;
 }
 .front_wrapper {
   display: block;
@@ -2389,14 +2401,14 @@ base
 }
 }
 
-@media screen and (min-width:375px) and (max-width:485px) {
+/* @media screen and (min-width:375px) and (max-width:485px) {
   .firstview {
     width: 100%;
     height: 74vh;
   }
   .comment {
     font-size: 9px;
-  }
+  } */
 
 @media screen and (min-width:375px) and (max-width:478px) {
   .firstview {
@@ -2445,6 +2457,9 @@ a.btn--radius {
   #navbtn {
     right: 20px;
   }
+  .comment {
+    font-size: 9px;
+  }
 
   .scroll_down a {
     bottom: 440px;
@@ -2479,6 +2494,9 @@ a.btn--radius {
     font-size: 16px;
   }
 
+  .thanks_sun_pc {
+    width: 28%;
+  }
   #profile_footer {
   width: 78%;
   }
@@ -2486,9 +2504,133 @@ a.btn--radius {
   font-size: 16px;
   }
 
-  .parallax_content {
-  background-attachment: scroll;
+  .front_wrapper {
+    display: block;
+    margin-top: 500px;
+    z-index: -1;
   }
+  /* .parallax_text {
+    display: inline-block;
+    margin: 61px 0 0 0;
+    top: 120px;
+} */
+  /* .parallax_content {
+  background-attachment: scroll;
+  } */
+    /* .parallax_content.img_bg_01 {
+    height: 500px;
+  } */
+  /* 背景画像 */
+  /* .parallax_content.img_bg_01 {
+    height: 500px;
+    background-image: url(./images/ootani_01.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: gray;
+    background-repeat: no-repeat;
+    background-size: 758px auto;
+    z-index: -100;
+  }
+  .parallax_content.img_bg_02 {
+    height: 500px;
+    background-image: url(./images/ootani_02.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: gray;
+    background-repeat: no-repeat;
+    background-size: 758px auto;
+    z-index: -10;
+  }
+  .parallax_content.img_bg_03 {
+    height: 500px;
+    background-image: url(./images/ootani_03.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: gray;
+    background-repeat: no-repeat;
+    background-size: 758px auto;
+    z-index: -1;
+  } */
+  .parallax_content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip: rect(auto, auto, auto, auto); /* これで背景を切り抜く */
+  } 
+  .parallax_content.img_bg_01 {
+    z-index: -3;
+    display: block;
+    height: 500px;
+    background-image: url(./images/ootani_01.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+    left: 0;
+    position: fixed;
+    top: 194px;
+    width: 100%;
+    background-color: gray;
+    background-repeat: no-repeat;
+    background-size: 758px auto;
+  }
+  .parallax_content.img_bg_02 {
+    z-index: -5;
+    display: block;
+    height: 500px;
+    background-image: url(./images/ootani_02.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: gray;
+    background-repeat: no-repeat;
+    background-size: 758px auto;
+    background-position: 20% top;
+  }
+  .parallax_content.img_bg_03 {
+    z-index: -7;
+    display: block;
+    height: 500px;
+    background-image: url(./images/ootani_03.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: gray;
+    background-repeat: no-repeat;
+    background-size: 758px auto;
+    background-position: 62% top;
+  }
+
   .ribbon1 {
   font-size: 13px;
   padding: 0 26px;
@@ -2504,130 +2646,31 @@ a.btn--radius {
 
 
 
-
-
-
-
-
-
-
-
-
-
-/* 波形のコードコピーしたらついてきた
-@media screen and (min-width: 768px) {
-  .u-pc {
-      display: block;
-  }
-
-  .u-sp {
-      display: none;
-  }
-} */
-
-
-
-/* loading */
-
-/* .loading-animation_gif img {
-  width: 100%;
-} */
-
-/*========= ローディング画面のためのCSS ===============*/
-/* #splash {
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	background: #333;
-	z-index: 9999999;
-	text-align:center;
-	color:#fff;
-}
-
-#splash-logo {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-} */
-
-/*========= 画面遷移のためのCSS ===============*/
-
-/*画面遷移アニメーション*/
-/* .splashbg{
-    display: none;
-} */
-
-/*bodyにappearクラスがついたら出現*/
-/* body.appear .splashbg{
-    display: block;
+@media screen and (max-width:374px) {
+  /* .parallax_content.img_bg_01 {
+    height: 500px;
+  } */
+  /* 背景画像 */
+  /* .parallax_content.img_bg_01 {
+    background-image: url(https://junpei-sugiyama.com/wp-content/uploads/2021/01/dog02.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     content: "";
-    position:fixed;
-	z-index: 999;
-    width: 100%;
     height: 100vh;
-    top: 0;
-	left: 0;
-    transform: scaleY(0);
-    background-color: lightcoral;/*伸びる背景色の設定*/
-	/* animation-name:PageAnime;
-	animation-duration:1.2s;
-	animation-timing-function:ease-in-out;
-	animation-fill-mode:forwards; */
-
-*/
-
-/* @keyframes PageAnime{
-	0% {
-		transform-origin:bottom;
-		transform:scaleY(0);
-	}
-	50% {
-		transform-origin:bottom;
-		transform:scaleY(1);
-	}
-	50.001% {
-		transform-origin:top;
-	}
-	100% {
-		transform-origin:top;
-		transform:scaleY(0);
-	}
-} */
-
-
-
-
-
-
-
-/* 
-@media screen and (max-width: 768px){
-  .parallax_content{
-    height: 100%;
-    background-image: none;
-  }
-  .parallax::before{
-    content: "";
-    display: block;
+    left: 0;
     position: fixed;
     top: 0;
-    left: 0;
-    -webkit-transform: translate3d(0, 0, -1px);
-    transform: translate3d(0, 0, -1px);
     width: 100%;
-    min-hieght: 100%;
-    -webkit-background-size: cover;
-    background-size: cover;
     z-index: -1;
-  }
-  .parallax_content.img_bg_01::before{
-    background-image: url();
-  }
-  .parallax_content.img_bg_02::before{
-    background-image: url();
-  }
-  .parallax_content.img_bg_03::before{
-    background-image: url();
-  }
-} */
+  } */
+}
+
+
+
+
+
+
+
+
+
